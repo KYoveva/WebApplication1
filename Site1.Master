@@ -1,0 +1,118 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="WebApplication1.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <title>Елентронна книжарница</title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            height: 23px;
+            text-align: center;
+        }
+        .auto-style2 {
+            font-size: x-large;
+        }
+        .auto-style3 {
+            text-align: center;
+        }
+        </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+         <table style="width: 100%;">
+                <tr>
+                     <td class="auto-style1" colspan="3">
+                         <h1><strong>ЕЛЕКТРОННА КНИЖАРНИЦА </h1>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </strong>
+                        <asp:ImageButton ID="ImageButton1" runat="server" OnClick="ImageButton1_Click" style="height: 16px" ImageUrl="~/Pictures/flag.jpg" />
+                        <asp:ImageButton ID="ImageButton2" runat="server" OnClick="ImageButton2_Click" style="height: 16px" ImageUrl="~/Pictures/usa_flag_images.jpg" />
+                     </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:Menu ID="Menu1" runat="server" DataSourceID="SiteMapDataSource1" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick1">
+                        </asp:Menu>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" ShowStartingNode="False" />
+                        <asp:SiteMapPath ID="SiteMapPath1" runat="server">
+                        </asp:SiteMapPath>
+                        <br />
+                        <br />
+                        <br />
+                        <br />
+                    </td>
+                    <td style="text-align: right">
+                        <asp:LoginView ID="LoginView1" runat="server">
+                            <AnonymousTemplate>
+                                <asp:Login ID="Login1" runat="server">
+                                </asp:Login>
+                                <asp:LinkButton ID="LinkButton1" runat="server" OnClick="LinkButton1_Click">Забравена парола</asp:LinkButton>
+<asp:PasswordRecovery ID="PasswordRecovery1" runat="server" Visible="False">
+</asp:PasswordRecovery>
+                            </AnonymousTemplate>
+                            <RoleGroups>
+                                <asp:RoleGroup Roles="User">
+                                    <ContentTemplate>
+                                        <asp:LoginName ID="LoginName1" runat="server" />
+                                        <asp:LoginStatus ID="LoginStatus1" runat="server" />
+                                        <br />
+                                        <asp:LinkButton ID="LinkButton2" runat="server" OnClick="LinkButton2_Click">Смяна на парола</asp:LinkButton>
+                                        <asp:ChangePassword ID="ChangePassword1" runat="server" Visible="False">
+                                        </asp:ChangePassword>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                                <asp:RoleGroup Roles="Admin">
+                                    <ContentTemplate>
+                                        <asp:LoginName ID="LoginName2" runat="server" />
+                                        <asp:LoginStatus ID="LoginStatus2" runat="server" />
+                                        <br />
+                                        <asp:LinkButton ID="LinkButton3" runat="server">Смяна на парола</asp:LinkButton>
+                                        <br />
+                                        <asp:LinkButton ID="LinkButton4" runat="server" OnClick="LinkButton4_Click">Създаване на потребител</asp:LinkButton>
+                                        <asp:ChangePassword ID="ChangePassword2" runat="server" Visible="False">
+                                        </asp:ChangePassword>
+                                        <asp:CreateUserWizard ID="CreateUserWizard1" runat="server" Visible="False">
+                                            <WizardSteps>
+                                                <asp:CreateUserWizardStep ID="CreateUserWizardStep1" runat="server" />
+                                                <asp:CompleteWizardStep ID="CompleteWizardStep1" runat="server" />
+                                            </WizardSteps>
+                                        </asp:CreateUserWizard>
+                                    </ContentTemplate>
+                                </asp:RoleGroup>
+                            </RoleGroups>
+                        </asp:LoginView>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        &nbsp;</td>
+                    <td style="text-align: right">
+                        &nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td class="auto-style3" colspan="2">
+                        <strong><span class="auto-style2">Кристина Йовева Ф№ 1420891</span></strong></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>
+                        <asp:AdRotator ID="AdRotator1" runat="server" DataSourceID="XmlDataSource1" />
+                        <asp:XmlDataSource ID="XmlDataSource1" runat="server" DataFile="~/Rotator.xml"></asp:XmlDataSource>
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+      
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

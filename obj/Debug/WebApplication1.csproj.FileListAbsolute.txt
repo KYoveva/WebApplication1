@@ -1,0 +1,10 @@
+D:\Krisi\E-business\WebApplication1\WebApplication1\bin\WebApplication1.dll
+D:\Krisi\E-business\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+D:\Krisi\E-business\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+D:\Krisi\E-business\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb
+D:\Krisi\E-business\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+G:\WebApplication1\WebApplication1\bin\WebApplication1.dll
+G:\WebApplication1\WebApplication1\bin\WebApplication1.pdb
+G:\WebApplication1\WebApplication1\obj\Debug\WebApplication1.csprojResolveAssemblyReference.cache
+G:\WebApplication1\WebApplication1\obj\Debug\WebApplication1.dll
+G:\WebApplication1\WebApplication1\obj\Debug\WebApplication1.pdb

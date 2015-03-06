@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0" enableLocalization="true" >
+    <siteMapNode url="" title=""  description="">
+        <siteMapNode url="~/Home.aspx" title="Начало" resourceKey="HomePage" description="" />
+        <siteMapNode url="~/Menu.aspx" title="Книги" resourceKey="BooksPage" description="" />
+      <siteMapNode url="~/Contacts.aspx" title="За връзка с нас"  resourceKey="ContactsPage" description="" />
+      <siteMapNode url="~/Map.aspx" title="Карта на сайта"  resourceKey="SiteMapPage" description="" />
+      <siteMapNode url="~/News.aspx" title="Новини" resourceKey="NewsPage" description="" />
+    </siteMapNode>
+</siteMap>
